@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Seed Credit</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio - v3.3.0
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">{{ name }}</a></h1>
+        <!-- <div class="social-links mt-3 text-center">
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div> -->
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="/login" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Profile</span></a></li>
+          <li><a href="/startup" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Startup Invest Opportunity</span></a></li>
+          <li><a href="/invest" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Quick Invest</span></a></li>
+          <li><a href="/loan" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Easy Loan</span></a></li>
+          <li><a href="invest_detail" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Investment Details</span></a></li>
+          <li><a href="/terms" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Terms & Conditions</span></a></li>
+      </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+     <!-- ======= Breadcrumbs ======= -->
+     <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <!-- <h2>Portfoio Details</h2> -->
+          <img src="assets/logo.png" height="50" width="150" style="border-radius: 20px;" >
+          <ol>
+            <li><h4 style="color:rgb(7, 20, 94);"> Balance : {{ball}}</h4></li>
+  
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+
+
+    <section id="resume" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Invest</h2>
+        </div>
+  
+          <div>
+                <h3>Please enqueue to get and invest when your turn comes up</h3>
+                <p>( You will get 5% return for a month on it )</p>
+                <br>
+          </div>
+          <form action="/invest" method="POST" class="form-inline">
+            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Enqueue</label>
+            <select class="custom-select my-1 mr-sm-2" name="amount" id="amount">
+              <option selected>Select the Amount</option>
+              <option value="100">100</option>
+              <option value="200">200</option>
+              <option value="300">300</option>
+            </select>          
+            <button type="submit" class="btn btn-primary my-1">Submit</button>
+        </form>
+        
+        <!-- </div> -->
+        <h2>{{out}}</h2>
+        <div>
+          <br>
+          <div>
+      <h4>Available Limit to invest : {{ valid_amount }} INR</h4>
+      
+</div>
+        <!-- <div>
+          <br> 
+          <h4>Queue:</h4>
+          <h4><pre class="tab">Amount                Time                    Status        </pre></h4>
+          {% for res in response %}
+            <h4><pre class="tab"> {{ res['amount'] }}         {{res['timestamp']}}           {{res['status']}}  </pre> </h4>
+              <br>
+          {% endfor %}
+        </div> -->
+        
+        
+
+         <!-- {% for res in response %}
+                  <p>{{ item }}<p/>
+              {% endfor %} -->
+
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Amount(INR)</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Status</th>
+                    <!-- <th scope="col">Timestamp</th>
+                    <th scope="col">Active/Closed</th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for res in response %}
+                  <tr>
+                  <th scope="row">{{ loop.index }}</th>
+                  <td>{{ res['amount'] }}</td>
+                  <td>{{ res['timestamp'] }}</td>
+                  <td>{{ res['status'] }}</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+                </table>
+      </div>
+      <br>
+      <div>
+        <form action="/loan" method="POST" class="form-inline">
+          <label class="my-1 mr-2" for="inlineFormCustomSelectPref"><h4 style="color:rgb(13, 25, 63);">Withdraw Your Investments -> </h4></label>
+          <!-- <select class="custom-select my-1 mr-sm-2" name="amount" id="amount">
+            <option selected>Select the Amount</option>
+            <option value="100">100</option>
+            <option value="200">200</option>
+            <option value="300">300</option>
+            <option value="400">400</option>
+            <option value="500">500</option>
+          </select>           -->
+          <button type="submit" class="btn btn-primary my-1">Withdraw</button>
+        </form>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- <section id="resume" class="resume">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Take Loan</h2>
+      </div>
+        <form action="/money" method="POST" class="form-inline">
+          <label class="my-1 mr-2" for="inlineFormCustomSelectPref"><h4>Please select the amount</h4></label>
+          <select class="custom-select my-1 mr-sm-2" name="amount" id="amount">
+            <option selected>Select the Amount</option>
+            <option value="1000">1000</option>
+            <option value="2000">2000</option>
+            <option value="3000">3000</option>
+          </select>          
+          <button type="submit" class="btn btn-primary my-1">Get Loan</button>
+      </form>
+      <br>
+      <h2>{{out}}</h2>
+      <div>
+        <div>
+    <h4>Available Limit to Take Loan : {{ valid_amount }}</h4>
+    
+</div>
+      <div>
+        <br> 
+        <h4>Past Loan</h4>
+        <h4><pre class="tab">Amount                Time                    Status        </pre></h4>
+        {% for res in response %}
+          <h4><pre class="tab"> {{ res['amount'] }}         {{res['timestamp']}}           {{res['status']}}  </pre> </h4>
+            <br>
+        {% endfor %}
+      </div> 
+    </div>
+
+    
+  </div>
+</section> -->
+  
+
+    <!-- Added diffeent code ends here -->
+
+</main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        <form action="/logout" method="POST">
+          <input type="submit" name="logout" id="logout" value="Log Out">
+        </form>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/purecounter/purecounter.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/typed.js/typed.min.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

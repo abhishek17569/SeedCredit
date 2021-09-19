@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Seed Credit</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio - v3.3.0
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">{{name}}</a></h1>
+        <!-- <div class="social-links mt-3 text-center">
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div> -->
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="/login" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Profile</span></a></li>
+          <li><a href="/startup" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Startup Invest Opportunity</span></a></li>
+          <li><a href="/invest" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Quick Invest</span></a></li>
+          <li><a href="/loan" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Easy Loan</span></a></li>
+          <li><a href="invest_detail" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Investment Details</span></a></li>
+          <li><a href="/terms" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Terms & Conditions</span></a></li>
+      </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <!-- <h2>Portfoio Details</h2> -->
+          <img src="assets/logo.png" height="50" width="150" style="border-radius: 20px;" >
+          <ol>
+            <li><h4 style="color:rgb(7, 20, 94);"> Balance : {{ball}}</h4></li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper-container">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/startup1.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/startup1_big1.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/startup1_big2.jpg" alt="">
+                </div>
+                
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <div><h4>Need : <b>{{target_funds}}</b></h4></div>
+            <div><h4><p>Fund Raised: <b>{{raised_funds}}</b></p></h4></div>
+            <div>
+              <form action="/start123" method="POST" class="form-inline">
+              <!-- <form action="/transaction.html" method="GET" class="form-inline"></form> -->
+                <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Please specify the amount you would like to invest.</label><br>
+                <select class="custom-select my-1 mr-sm-2" name="amount" id="amount">
+                  <option selected>Select the Ammount</option>
+                  <option value="100">100</option>
+                  <option value="200">200</option>
+                  <option value="300">300</option>
+                  <option value="400">400</option>
+                  <option value="500">500</option>
+                  <option value="600">600</option>
+                  <option value="700">700</option>
+                  <option value="800">800</option>
+                  <option value="900">900</option>
+                  <option value="1000">1000</option>
+                </select>          
+                <button type="submit" class="btn btn-primary my-1">Submit</button>
+              </form>
+              <h4>{{out1}}</h4>
+            </div>
+          </div>
+  
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Printing Industry</li>
+                <li><strong>Client</strong>: T-print</li>
+                <li><strong>Project date</strong>: 01 JUNE, 2021</li>
+                <li><strong>Project URL</strong>: <a href="#">www.expample.com</a></li>
+                <li><strong>Success Chance</strong>:90 %</li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>We are about to launch a startup where we print Shirts as per user satisafaction.</h2>
+              <p>
+                <b>WHO WE ARE?</b>
+                <p>We are group of indiviudal who are passionate about entrepreneurship, who want to explore field. </p>
+                <p><b>Investment Need</b></p>
+                <p>Total Investment need: <b>{{target_funds}}</b></p>
+                <p><b>Returns:</b>
+                  <p>In return, we offer people 1 printing every month for next 5 years.</p>
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="container">
+        <div class="copyright">
+          <form action="/logout" method="POST">
+            <input type="submit" name="logout" id="logout" value="Log Out">
+          </form>
+        </div>
+      </div>
+    </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

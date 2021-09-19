@@ -1,0 +1,29 @@
+Queue 
+{
+
+}
+
+Loan
+{
+    uid
+    status
+    ammount
+    return_ammount
+    timestamp
+}
+Invest
+{
+    uid
+    status
+    ammount
+    return_ammount
+    timestamp
+}
+Startup
+{
+    uid
+    startup_uid
+    ammount
+    status
+    timestamp
+}

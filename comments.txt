@@ -1,0 +1,16 @@
+invest_bool = 0 or 1
+0 -> means he need money or say someOne can invest in him
+1 -> means he don't need money or say he want to invest in someOne
+
+
+
+
+AIM:
+-> People can reach out to us for raising funds for startups
+-> We want that small contributor can invest their money in starups and in return they get incentives from them
+-> We want to lend money to the people that are in need. and inreturn they have to contribute little more to the lender.
+
+
+Our Profit:
+-> startups have to give a amount/share in their work.
+-> The person who get money from lender, he/she has to return a additionl amount in the form of interest. And, from that interest we save a small percentage for corwder.
