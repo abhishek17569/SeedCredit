@@ -1,0 +1,10 @@
+{ 
+    "_id" : ObjectId("61260d4827e6a25db7be5171"), 
+    "uid" : "demo_uid", 
+    "startup_uid" : "demo_startup_uid", 
+    "amount" : "demo_amount", 
+    "status" : "active/closed", 
+    "timestamp" : "demo_timesat", 
+    "accountHolderID" : "", 
+    "accountID" : ""
+}

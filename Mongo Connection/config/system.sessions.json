@@ -1,0 +1,7 @@
+{ 
+    "_id" : {
+        "id" : UUID("f9dfa536-8ef1-4e8d-9f35-d6a3704ad552"), 
+        "uid" : BinData(0, "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=")
+    }, 
+    "lastUse" : ISODate("2021-08-26T17:44:00.552+0000")
+}
